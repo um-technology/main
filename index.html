@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #f1f1f1;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #00bfff;
+    }
+    .tab {
+      display: none;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .tab.active {
+      display: block;
+    }
+    .tab img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TechCompany</div>
+    <nav>
+      <a onclick="showTab('tab1')">Home</a>
+      <a onclick="showTab('tab2')">Projetos</a>
+      <a onclick="showTab('tab3')">Estudantes</a>
+      <a onclick="showTab('tab4')">Publicações</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tab1" class="tab active">
+      <h1>Welcome to TechCompany</h1>
+      <p>Innovating your digital future.</p>
+      <img src="image.png" alt="Company Visual" />
+    </section>
+
+    <section id="tab2" class="tab">
+      <h1>Os nossos projetos</h1>
+      <p>We provide cutting-edge technology solutions tailored for your business needs.</p>
+    </section>
+
+    <section id="tab3" class="tab">
+      <h1>Os nossos estudantes</h1>
+      <p>Explore the groundbreaking projects we've successfully delivered.</p>
+    </section>
+
+    <section id="tab4" class="tab">
+      <h1>As nossas publicações</h1>
+      <p>Reach out for collaborations, questions, or to request a demo.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 TechCompany. All rights reserved.
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
