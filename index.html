@@ -43,6 +43,29 @@
       margin-top: 2rem;
       border-radius: 10px;
     }
+    .projects-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .project-box {
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+    }
+    .project-box:hover {
+      transform: scale(1.05);
+    }
+    .project-box a {
+      text-decoration: none;
+      color: #00bfff;
+      font-weight: bold;
+    }
     footer {
       background-color: #1a1a1a;
       text-align: center;
@@ -56,32 +79,61 @@
     <div class="logo">TechCompany</div>
     <nav>
       <a onclick="showTab('tab1')">Home</a>
-      <a onclick="showTab('tab2')">Projects</a>
-      <a onclick="showTab('tab3')">Students</a>
+      <a onclick="showTab('tab2')">Students</a>
+      <a onclick="showTab('tab3')">Projects</a>
       <a onclick="showTab('tab4')">Publications</a>
     </nav>
   </header>
 
   <main>
     <section id="tab1" class="tab active">
-      <h1>Welcome to UMtechnology</h1>
-      <p>Innovating your digital future in our labs.</p>
+      <h1>Welcome to TechCompany</h1>
+      <p>Innovating your digital future.</p>
       <img src="image.png" alt="Company Visual" />
     </section>
 
     <section id="tab2" class="tab">
-      <h1>Our projects</h1>
-      <p>We provide cutting-edge technology solutions tailored for your business needs.</p>
+      <h1>Our Students</h1>
+      <p>A list of our many projects that are being carried out in our lab.</p>
     </section>
 
     <section id="tab3" class="tab">
-      <h1>Our students</h1>
-      <p>Explore the groundbreaking projects we've successfully delivered.</p>
+      <h1>Our Projects</h1>
+      <p>A list of our many projects that are being carried out in our lab.</p>
+      <div class="projects-container">
+        <div class="project-box">
+          <h3>Project 1</h3>
+          <a href="#" onclick="showTab('project1')">View Details</a>
+        </div>
+        <div class="project-box">
+          <h3>Project 2</h3>
+          <a href="#" onclick="showTab('project2')">View Details</a>
+        </div>
+        <div class="project-box">
+          <h3>Project 3</h3>
+          <a href="#" onclick="showTab('project3')">View Details</a>
+        </div>
+      </div>
     </section>
 
     <section id="tab4" class="tab">
-      <h1>Our publications</h1>
+      <h1>Our Publications</h1>
       <p>Reach out for collaborations, questions, or to request a demo.</p>
+    </section>
+
+    <section id="project1" class="tab">
+      <h1>Project 1</h1>
+      <p>This project is a state-of-the-art platform for managing cloud resources efficiently.</p>
+    </section>
+
+    <section id="project2" class="tab">
+      <h1>Project 2</h1>
+      <p>This project revolutionizes how users interact with AI tools in real time.</p>
+    </section>
+
+    <section id="project3" class="tab">
+      <h1>Project 3</h1>
+      <p>An innovative IoT system enabling smarter and more connected homes.</p>
     </section>
   </main>
 
@@ -98,4 +150,3 @@
   </script>
 </body>
 </html>
-
