@@ -68,19 +68,48 @@
     }
     .project-box {
       background-color: #1f1f1f;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 1.5rem;
-      width: 250px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: transform 0.2s;
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, box-shadow 0.3s ease;
     }
+
     .project-box:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 191, 255, 0.2);
     }
+
+    .project-box h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: #f1f1f1;
+    }
+
+    .project-box p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
     .project-box a {
+      display: inline-block;
       text-decoration: none;
       color: #00bfff;
       font-weight: bold;
+      border: 1px solid #00bfff;
+      border-radius: 6px;
+      padding: 0.4rem 0.75rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .project-box a:hover {
+      background-color: #00bfff;
+      color: #0f0f0f;
     }
     footer {
       background-color: #1a1a1a;
@@ -151,15 +180,18 @@
         <p>A list of our many projects that are being carried out in our lab.</p>
       <div class="projects-container">
         <div class="project-box">
-          <h3>Lightweight Alloys - Recent Developments in Processing Methods</h3>
+          <h3>Lightweight Alloys</h3>
+          <p>Recent developments in processing methods using sonoprocessing techniques.</p>
           <a href="#" onclick="showTab('project1')">View Details</a>
         </div>
         <div class="project-box">
-          <h3>Residual Stress Relief of Welded Aluminum Alloy Plate</h3>
+          <h3>Residual Stress Relief</h3>
+          <p>Ultrasound-enhanced techniques for welded aluminum alloy plates.</p>
           <a href="#" onclick="showTab('project2')">View Details</a>
         </div>
         <div class="project-box">
           <h3>Project 3</h3>
+          <p>Development of an innovative IoT system for smart and connected environments.</p>
           <a href="#" onclick="showTab('project3')">View Details</a>
         </div>
       </div>
@@ -172,18 +204,21 @@
         <p>A list of some of our most cited papers on the topic, projects developed in the lab and in colaboration with students and other investigators. These publications reference UMTechnology as a pionneer in its area, developing new areas of our understanding and comprehension of such topics.</p>
         <div class="projects-container">
           <div class="project-box">
-            <h3>Shielding AZ91D-1%Ca from corrosion through ultrasound melt treatment</h3>
+            <h3>Ultrasound Melt Treatment</h3>
+            <p>Corrosion shielding of AZ91D-1%Ca through advanced melt processing.</p>
             <a href="#" onclick="showTab('publication1')">View Details</a>
           </div>
-          <div class="project-box">
-            <h3>Additive manufacturing assisted investment casting</h3>
+        <div class="project-box">
+            <h3>Investment Casting</h3>
+            <p>Using additive manufacturing to assist in high-precision metal casting.</p>
             <a href="#" onclick="showTab('publication2')">View Details</a>
-          </div>
-          <div class="project-box">
-            <h3>Thermal analysis strategy for Al-7Si-Mg alloy sand-casting modelling</h3>
-            <a href="#" onclick="showTab('publication3')">View Details</a>
-          </div>
         </div>
+        <div class="project-box">
+            <h3>Thermal Analysis Strategy</h3>
+            <p>Optimizing simulation models for Al-7Si-Mg alloy sand casting.</p>
+            <a href="#" onclick="showTab('publication3')">View Details</a>
+        </div>
+      </div>
     </section>
 
     <section id="tab5" class="tab">
