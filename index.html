@@ -38,22 +38,19 @@
     }
     main {
       position: relative;
-      min-height: 100vh;
-      overflow: hidden;
-      padding-bottom: 0; 
+      min-height: 500px;
+    }
     .tab {
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease-in-out;
-      padding: 2rem;
+      padding: 4rem 2rem;
       position: absolute;
+      width: 100%;
       top: 80px;
       left: 0;
-      width: 100%;
-      height: calc(100vh - 80px);
-      overflow-y: auto; 
-      box-sizing: border-box;
     }
+
     .tab.active {
       opacity: 1;
       visibility: visible;
