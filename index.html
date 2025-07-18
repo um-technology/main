@@ -69,9 +69,8 @@
     const pass = document.getElementById("password").value;
 
     if (user === ADMIN_USERNAME && pass === ADMIN_PASSWORD) {
-      // Toggle to admin panel view
-      document.getElementById("loginForm").style.display = "none";
-      document.getElementById("adminPanel").style.display = "block";
+      // After successful login, redirect to another page (e.g., adminPanel.html)
+      window.location.href = "logi.html"; // Redirect to your admin page
     } else {
       document.getElementById("error").textContent = "Incorrect username or password.";
     }
