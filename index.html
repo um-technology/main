@@ -148,12 +148,25 @@
       line-height: 1.6;
       hyphens: auto;
     }
+    .logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+    }
+
   </style>
 </head>
 <body>
   <header>
     <div class="logo-container">
-      <div class="logo">UMTechnology</div>
+      <div class="logo">
+        <img src="your-logo.png" alt="UMTechnology Logo" class="logo-img">
+      </div>
     </div>
     <nav>
       <a id="link-tab1" class="active-tab" onclick="showTab('tab1', this)">Home</a>
