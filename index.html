@@ -25,9 +25,14 @@
       text-decoration: none;
       font-weight: 500;
       cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
     }
     nav a:hover {
       color: #00bfff;
+    }
+    nav a.active-tab {
+      border-bottom: 2px solid #00bfff;
     }
     main {
       position: relative;
@@ -43,7 +48,6 @@
       top: 80px;
       left: 0;
     }
-
     .tab.active {
       opacity: 1;
       visibility: visible;
@@ -90,29 +94,27 @@
       text-align: justify;
     }
     .big-letter {
-    font-size: 85%;
+      font-size: 85%;
     }
     .big-letter2 {
-    font-size: 125%;
+      font-size: 125%;
     }
     .centered-content p {
-    text-align: justify;
+      text-align: justify;
     }
-    
   </style>
 </head>
 <body>
   <header>
     <div class="logo-container">
       <div class="logo">UMTechnology</div>
-      
     </div>
     <nav>
-      <a onclick="showTab('tab1')">Home</a>
-      <a onclick="showTab('tab2')">Students</a>
-      <a onclick="showTab('tab3')">Projects</a>
-      <a onclick="showTab('tab4')">Publications</a
-      <a onclick="showTab('tab5')">Contacts</a>
+      <a id="link-tab1" class="active-tab" onclick="showTab('tab1', this)">Home</a>
+      <a id="link-tab2" onclick="showTab('tab2', this)">Students</a>
+      <a id="link-tab3" onclick="showTab('tab3', this)">Projects</a>
+      <a id="link-tab4" onclick="showTab('tab4', this)">Publications</a>
+      <a id="link-tab5" onclick="showTab('tab5', this)">Contacts</a>
     </nav>
   </header>
 
@@ -270,10 +272,14 @@
   </footer>
 
   <script>
-    function showTab(tabId) {
+    function showTab(tabId, element = null) {
       const tabs = document.querySelectorAll('.tab');
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
+
+      const links = document.querySelectorAll('nav a');
+      links.forEach(link => link.classList.remove('active-tab'));
+      if (element) element.classList.add('active-tab');
     }
   </script>
 </body>
