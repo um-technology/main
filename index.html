@@ -30,12 +30,20 @@
       color: #00bfff;
     }
     .tab {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out;
       padding: 4rem 2rem;
-      text-align: center;
+      position: absolute;
+      width: 100%;
+      top: 80px;
+      left: 0;
     }
+
     .tab.active {
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      position: relative;
     }
     .tab img {
       max-width: 100%;
@@ -72,10 +80,10 @@
       padding: 2rem;
       margin-top: 4rem;
     }
-     .centered-content {
+    .centered-content {
       max-width: 800px;
       margin: 0 auto;
-      text-align: left;
+      text-align: justify;
     }
     .big-letter {
     font-size: 85%;
