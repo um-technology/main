@@ -398,22 +398,6 @@
     }
   </script>
 
-  <script>
-    document.querySelectorAll("nav a").forEach(link => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const tabId = this.dataset.tab;
-        document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
-        document.getElementById(tabId)?.classList.add("active");
-        document.querySelectorAll("nav a").forEach(a => a.classList.remove("active-tab"));
-        this.classList.add("active-tab");
-      });
-    });
-
-    // Disable middle click
-    window.addEventListener('mousedown', function(e) {
-      if (e.button === 1) e.preventDefault();
-    });
-  </script>
+  <script src="secure.js"></script>
 </body>
 </html>
